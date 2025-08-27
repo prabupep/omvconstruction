@@ -5,12 +5,13 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: 'Residential Construction', href: '#services' },
-      { name: 'Commercial Construction', href: '#services' },
-      { name: 'Industrial Construction', href: '#services' },
+      { name: 'All Type of Design Works', href: '#services' },
+      { name: 'Commercial & Apartment Building', href: '#services' },
+      { name: 'Residential Works', href: '#services' },
+      { name: 'School & Hospital Building', href: '#services' },
+      { name: 'All Type of Road Works', href: '#services' },
       { name: 'Renovation & Remodeling', href: '#services' },
-      { name: 'Project Management', href: '#services' },
-      { name: 'Consulting Services', href: '#services' }
+      { name: 'Infrastructure Development', href: '#services' }
     ],
     company: [
       { name: 'About Us', href: '#about' },
@@ -81,11 +82,33 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">OMV</span>
+            <div className="flex items-center space-x-3 mb-6">
+              {/* OM VINAYAGA Logo */}
+              <div className="relative w-12 h-12">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-600 via-teal-500 to-teal-700 relative overflow-hidden">
+                  {/* Left teal section */}
+                  <div className="absolute left-0 top-0 w-6 h-12 bg-teal-600 rounded-l-full"></div>
+                  {/* Right yellow section */}
+                  <div className="absolute right-0 top-0 w-6 h-12 bg-yellow-400 rounded-r-full"></div>
+                  {/* Diagonal line */}
+                  <div className="absolute bottom-2 left-1 w-8 h-0.5 bg-yellow-400 transform rotate-12"></div>
+                  {/* Ruler marks */}
+                  <div className="absolute bottom-1 left-1 space-y-0.5">
+                    {[0, 1, 2, 3].map((i) => (
+                      <div key={i} className="w-0.5 h-1 bg-white opacity-60"></div>
+                    ))}
+                  </div>
+                  {/* Upward extensions - skyscrapers */}
+                  <div className="absolute -top-1 left-1 w-1 h-3 bg-teal-600"></div>
+                  <div className="absolute -top-2 left-2 w-1 h-4 bg-teal-600"></div>
+                  <div className="absolute -top-1 right-2 w-1 h-5 bg-yellow-400"></div>
+                </div>
               </div>
-              <span className="text-xl font-bold">Construction</span>
+              {/* Company Name */}
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white leading-tight">OM VINAYAGA</span>
+                <span className="text-sm font-semibold text-yellow-400 leading-tight">CONSTRUCTIONS</span>
+              </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Building excellence since 2008. We deliver exceptional construction services with unmatched quality, 
@@ -98,7 +121,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+                  className="w-10 h-10 bg-gray-800 hover:bg-teal-600 rounded-lg flex items-center justify-center transition-colors duration-200"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -115,7 +138,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href.replace('#', ''))}
-                    className="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </button>
@@ -132,7 +155,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <button
                     onClick={() => link.href.startsWith('#') ? scrollToSection(link.href.replace('#', '')) : null}
-                    className="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </button>
@@ -149,7 +172,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <button
                     onClick={() => link.href.startsWith('#') ? scrollToSection(link.href.replace('#', '')) : null}
-                    className="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover:text-teal-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </button>
@@ -170,9 +193,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400"
               />
-              <button className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors duration-200">
+              <button className="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-colors duration-200">
                 Subscribe
               </button>
             </div>
@@ -185,12 +208,12 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © {currentYear} OMV Construction Services. All rights reserved.
+              © {currentYear} OM VINAYAGA CONSTRUCTIONS. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-green-400 transition-colors duration-200">Privacy Policy</a>
-              <a href="#" className="hover:text-green-400 transition-colors duration-200">Terms of Service</a>
-              <a href="#" className="hover:text-green-400 transition-colors duration-200">Cookie Policy</a>
+              <a href="#" className="hover:text-teal-400 transition-colors duration-200">Privacy Policy</a>
+              <a href="#" className="hover:text-teal-400 transition-colors duration-200">Terms of Service</a>
+              <a href="#" className="hover:text-teal-400 transition-colors duration-200">Cookie Policy</a>
             </div>
           </div>
         </div>

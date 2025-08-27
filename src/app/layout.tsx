@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OMV Construction Services - Professional Construction Solutions",
+  title: "OM VINAYAGA CONSTRUCTIONS - Professional Construction Solutions",
   description: "Leading construction company providing comprehensive construction services including residential, commercial, and industrial projects. Quality craftsmanship and reliable service.",
-  keywords: "construction, building, renovation, construction services, construction company",
-  authors: [{ name: "OMV Construction Services" }],
+  keywords: "construction, building, renovation, construction services, construction company, OM VINAYAGA, Madurai construction",
+  authors: [{ name: "OM VINAYAGA CONSTRUCTIONS" }],
   robots: "index, follow",
 };
 
