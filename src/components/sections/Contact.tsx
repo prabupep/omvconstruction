@@ -214,13 +214,15 @@ const Contact = () => {
                 />
               </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none shadow-lg hover:shadow-xl disabled:shadow-md"
-              >
-                {isSubmitting ? 'Sending Message...' : 'Send Message'}
-              </button>
+              {/* Submit Button */}
+              <div className="col-span-full">
+                <button
+                  type="submit"
+                  className="w-full px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Send Message
+                </button>
+              </div>
             </form>
           </div>
 

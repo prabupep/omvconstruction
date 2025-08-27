@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button
               onClick={scrollToContact}
-              className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Start Your Project
             </button>
@@ -56,7 +56,7 @@ const Hero = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="px-8 py-4 border-2 border-gray-300 hover:border-green-600 text-gray-700 hover:text-green-600 font-semibold rounded-lg text-lg transition-all duration-300 hover:bg-green-50"
+              className="px-8 py-4 border-2 border-teal-800 hover:border-yellow-500 text-teal-800 hover:text-yellow-600 font-semibold rounded-lg text-lg transition-all duration-300 hover:bg-yellow-50"
             >
               View Services
             </button>
@@ -65,15 +65,15 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
+              <div className="text-3xl font-bold text-teal-800 mb-2">500+</div>
               <div className="text-gray-600">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-600 mb-2">15+</div>
+              <div className="text-3xl font-bold text-yellow-500 mb-2">15+</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
+              <div className="text-3xl font-bold text-teal-800 mb-2">100%</div>
               <div className="text-gray-600">Client Satisfaction</div>
             </div>
           </div>
@@ -82,8 +82,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-teal-800 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-teal-800 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

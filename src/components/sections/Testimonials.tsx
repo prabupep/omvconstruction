@@ -214,26 +214,23 @@ const Testimonials = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-yellow-50 to-green-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Ready to Join Our Happy Clients?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Experience the same level of excellence and satisfaction that our clients rave about. 
-              Let&apos;s start building your dream project today.
-            </p>
-            <button
-              onClick={() => {
-                const element = document.getElementById('contact');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              Start Your Project
-            </button>
-          </div>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Experience Our Quality?
+          </h3>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join our satisfied clients and let us deliver the same exceptional results for your project.
+          </p>
+          <button
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Start Your Project
+          </button>
         </div>
       </div>
     </section>

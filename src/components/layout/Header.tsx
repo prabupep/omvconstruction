@@ -36,31 +36,31 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               Contact
             </button>
@@ -70,7 +70,7 @@ const Header = () => {
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl"
+              className="bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 px-6 py-2 rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl"
             >
               Get Quote
             </button>
@@ -80,7 +80,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-green-600 p-2"
+              className="text-gray-700 hover:text-yellow-500 p-2"
               aria-label="Toggle menu"
             >
               <svg
@@ -115,37 +115,37 @@ const Header = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-100">
               <button
                 onClick={() => scrollToSection('home')}
-                className="block w-full text-left text-gray-700 hover:text-green-600 px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="block w-full text-left text-gray-700 hover:text-yellow-500 px-3 py-2 text-base font-medium transition-colors duration-200"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection('services')}
-                className="block w-full text-left text-gray-700 hover:text-green-600 px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="block w-full text-left text-gray-700 hover:text-yellow-500 px-3 py-2 text-base font-medium transition-colors duration-200"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="block w-full text-left text-gray-700 hover:text-green-600 px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="block w-full text-left text-gray-700 hover:text-yellow-500 px-3 py-2 text-base font-medium transition-colors duration-200"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('projects')}
-                className="block w-full text-left text-gray-700 hover:text-green-600 px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="block w-full text-left text-gray-700 hover:text-yellow-500 px-3 py-2 text-base font-medium transition-colors duration-200"
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left text-gray-700 hover:text-green-600 px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="block w-full text-left text-gray-700 hover:text-yellow-500 px-3 py-2 text-base font-medium transition-colors duration-200"
               >
                 Contact
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg font-medium transition-colors duration-200 mt-4"
+                className="block w-full text-left bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 px-3 py-2 rounded-lg font-medium transition-colors duration-200 mt-4"
               >
                 Get Quote
               </button>

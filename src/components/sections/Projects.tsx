@@ -199,31 +199,23 @@ const Projects = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-yellow-50 to-green-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Ready to Start Your Next Project?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let&apos;s discuss how we can bring your construction vision to life with the same quality and expertise 
-              demonstrated in our portfolio.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => {
-                  const element = document.getElementById('contact');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Start Your Project
-              </button>
-              <button className="px-8 py-4 border-2 border-gray-300 hover:border-green-600 text-gray-700 hover:text-green-600 font-semibold rounded-lg text-lg transition-all duration-300 hover:bg-green-50">
-                View Full Portfolio
-              </button>
-            </div>
-          </div>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Start Your Next Project?
+          </h3>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss your vision and create something extraordinary together.
+          </p>
+          <button
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Get Started Today
+          </button>
         </div>
       </div>
     </section>

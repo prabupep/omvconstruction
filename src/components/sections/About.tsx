@@ -180,6 +180,27 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Work With Us?
+          </h3>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join our growing list of satisfied clients and let us bring your vision to life.
+          </p>
+          <button
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Start Your Project
+          </button>
+        </div>
       </div>
     </section>
   );
