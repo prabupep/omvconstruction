@@ -4,62 +4,41 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: 'All Type of Design Works',
-      description: 'Comprehensive architectural and engineering design services including structural design, interior design, and 3D modeling for all construction projects.',
+      title: 'Residential Construction',
+      description: 'Custom homes, renovations, and residential projects built to your exact specifications with premium materials and craftsmanship.',
       icon: (
-        <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
       ),
-      features: ['Architectural Design', 'Structural Engineering', '3D Modeling', 'Interior Design']
+      features: ['Custom Design', 'Quality Materials', 'Timely Completion', 'Warranty']
     },
     {
       id: 2,
-      title: 'Commercial & Apartment Building',
-      description: 'Complete construction services for commercial buildings, office complexes, and multi-story apartment buildings with modern amenities.',
+      title: 'Commercial Construction',
+      description: 'Office buildings, retail spaces, and commercial facilities designed for functionality, aesthetics, and long-term value.',
       icon: (
         <svg className="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
       ),
-      features: ['Office Buildings', 'Shopping Centers', 'Apartment Complexes', 'Modern Amenities']
+      features: ['Project Management', 'Code Compliance', 'Energy Efficiency', 'Modern Design']
     },
     {
       id: 3,
-      title: 'Residential Works',
-      description: 'Custom home construction, villa development, and residential projects built to your exact specifications with premium materials.',
+      title: 'Industrial Construction',
+      description: 'Warehouses, manufacturing facilities, and industrial complexes built for efficiency, safety, and operational excellence.',
       icon: (
-        <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
-      features: ['Custom Homes', 'Villas', 'Premium Materials', 'Quality Craftsmanship']
+      features: ['Safety Standards', 'Heavy Equipment', 'Specialized Systems', 'Compliance']
     },
     {
       id: 4,
-      title: 'School & Hospital Building',
-      description: 'Specialized construction for educational institutions and healthcare facilities with focus on safety, accessibility, and modern infrastructure.',
-      icon: (
-        <svg className="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      ),
-      features: ['Educational Facilities', 'Healthcare Buildings', 'Safety Standards', 'Modern Infrastructure']
-    },
-    {
-      id: 5,
-      title: 'All Type of Road Works',
-      description: 'Comprehensive road construction services including highways, bridges, flyovers, and urban road development with modern engineering standards.',
-      icon: (
-        <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      features: ['Highways', 'Bridges', 'Flyovers', 'Urban Roads']
-    },
-    {
-      id: 6,
-      title: 'Renovation and Remodeling',
+      title: 'Renovation & Remodeling',
       description: 'Transform existing spaces with modern renovations, upgrades, and remodeling projects that enhance value and functionality.',
       icon: (
         <svg className="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,15 +48,26 @@ const Services = () => {
       features: ['Design Consultation', 'Quality Workmanship', 'Minimal Disruption', 'Value Addition']
     },
     {
-      id: 7,
-      title: 'Infrastructure Development',
-      description: 'Large-scale infrastructure projects including water supply systems, sewage treatment, power distribution, and telecommunications.',
+      id: 5,
+      title: 'Project Management',
+      description: 'Comprehensive project management services ensuring your construction project stays on time, within budget, and meets all specifications.',
       icon: (
-        <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
         </svg>
       ),
-      features: ['Water Systems', 'Power Distribution', 'Telecommunications', 'Urban Planning']
+      features: ['Timeline Management', 'Budget Control', 'Quality Assurance', 'Communication']
+    },
+    {
+      id: 6,
+      title: 'Consulting Services',
+      description: 'Expert construction consulting to help you make informed decisions about your building projects and investments.',
+      icon: (
+        <svg className="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      features: ['Feasibility Studies', 'Cost Analysis', 'Design Review', 'Risk Assessment']
     }
   ];
 
@@ -86,13 +76,13 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-100 text-teal-800 text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-100 text-yellow-800 text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
             Our Services
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Comprehensive Construction
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-yellow-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-600">
               Solutions
             </span>
           </h2>
@@ -107,15 +97,15 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-teal-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+              className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-green-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-50 to-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-yellow-50 to-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-teal-600 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
                 {service.title}
               </h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -126,7 +116,7 @@ const Services = () => {
               <ul className="space-y-2">
                 {service.features.map((feature, index) => (
                   <li key={index} className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-teal-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     {feature}
@@ -136,7 +126,7 @@ const Services = () => {
 
               {/* Hover Effect */}
               <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="text-teal-600 font-semibold hover:text-teal-700 transition-colors duration-200">
+                <button className="text-green-600 font-semibold hover:text-green-700 transition-colors duration-200">
                   Learn More →
                 </button>
               </div>
@@ -146,7 +136,7 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-teal-50 to-yellow-50 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-yellow-50 to-green-50 rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Ready to Start Your Project?
             </h3>
@@ -160,7 +150,7 @@ const Services = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Get Free Consultation
             </button>

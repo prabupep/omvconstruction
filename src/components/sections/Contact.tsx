@@ -46,9 +46,9 @@ const Contact = () => {
   const contactInfo = [
     {
       title: 'Office Address',
-      content: '94/19 SATHYAMOORTHY NAGAR, BYE PASS ROAD, MADURAI – 625016',
+      content: '123 Construction Way, Building District, City, State 12345',
       icon: (
-        <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
@@ -56,7 +56,7 @@ const Contact = () => {
     },
     {
       title: 'Phone Number',
-      content: '+91 7708090145',
+      content: '+1 (555) 123-4567',
       icon: (
         <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -65,9 +65,9 @@ const Contact = () => {
     },
     {
       title: 'Email Address',
-      content: 'info@omvinayagaconstructions.com',
+      content: 'info@omvconstruction.com',
       icon: (
-        <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       )
@@ -84,17 +84,17 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-teal-50 via-white to-yellow-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-yellow-50 via-white to-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-100 text-teal-800 text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-100 text-yellow-800 text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
             Get In Touch
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Let&apos;s Build
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-yellow-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-600">
               Together
             </span>
           </h2>
@@ -122,7 +122,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -138,7 +138,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -155,7 +155,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -170,7 +170,7 @@ const Contact = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter company name"
                   />
                 </div>
@@ -186,16 +186,14 @@ const Contact = () => {
                   value={formData.projectType}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                 >
                   <option value="">Select project type</option>
-                  <option value="design">All Type of Design Works</option>
-                  <option value="commercial">Commercial & Apartment Building</option>
-                  <option value="residential">Residential Works</option>
-                  <option value="school-hospital">School & Hospital Building</option>
-                  <option value="road">All Type of Road Works</option>
+                  <option value="residential">Residential Construction</option>
+                  <option value="commercial">Commercial Construction</option>
+                  <option value="industrial">Industrial Construction</option>
                   <option value="renovation">Renovation & Remodeling</option>
-                  <option value="infrastructure">Infrastructure Development</option>
+                  <option value="consulting">Consulting Services</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -211,7 +209,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200 resize-none"
                   placeholder="Tell us about your project requirements, timeline, and any specific details..."
                 />
               </div>
@@ -219,7 +217,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-teal-600 hover:bg-teal-700 disabled:bg-teal-400 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none shadow-lg hover:shadow-xl disabled:shadow-md"
+                className="w-full bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none shadow-lg hover:shadow-xl disabled:shadow-md"
               >
                 {isSubmitting ? 'Sending Message...' : 'Send Message'}
               </button>
@@ -252,28 +250,28 @@ const Contact = () => {
 
             {/* Additional Info */}
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h4 className="font-semibold text-gray-900 mb-4">Why Choose OM VINAYAGA CONSTRUCTIONS?</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Why Choose OMV Construction?</h4>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-teal-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Free consultation and project assessment
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-teal-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Detailed project proposals and timelines
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-teal-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Transparent pricing and progress updates
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-teal-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Post-completion support and warranty
@@ -287,14 +285,14 @@ const Contact = () => {
         <div className="mt-20">
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Our Location</h3>
-            <div className="h-64 bg-gradient-to-br from-teal-200 to-yellow-200 rounded-xl flex items-center justify-center">
+            <div className="h-64 bg-gradient-to-br from-yellow-200 to-green-200 rounded-xl flex items-center justify-center">
               <div className="text-center">
                 <svg className="w-16 h-16 text-white/80 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <p className="text-white/80 font-medium">Interactive Map Coming Soon</p>
-                <p className="text-white/60 text-sm">94/19 SATHYAMOORTHY NAGAR, BYE PASS ROAD, MADURAI – 625016</p>
+                <p className="text-white/60 text-sm">123 Construction Way, Building District</p>
               </div>
             </div>
           </div>
