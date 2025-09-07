@@ -28,7 +28,7 @@ const UnderConstruction = () => {
                   Under Construction
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
-                  We're building something amazing!
+                  We&apos;re building something amazing!
                 </p>
               </div>
             </div>
@@ -122,7 +122,7 @@ const UnderConstruction = () => {
         {/* Coming Soon Message */}
         <div className="mt-8">
           <p className="text-lg text-gray-600 mb-4">
-            Our website is currently under construction. We'll be back soon with a better experience!
+            Our website is currently under construction. We&apos;ll be back soon with a better experience!
           </p>
           <div className="flex items-center justify-center space-x-2 text-yellow-600">
             <div className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce"></div>
