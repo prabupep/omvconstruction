@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
+import Image from 'next/image';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -11,7 +12,7 @@ const Projects = () => {
       title: 'Modern Office Complex',
       category: 'commercial',
       description: 'A state-of-the-art office building featuring sustainable design, smart building technology, and modern amenities.',
-      image: '/api/placeholder/400/300',
+      image: '/images/construction/commercial.jpg',
       year: '2024',
       area: '25,000 sq ft',
       location: 'Downtown Business District'
@@ -21,7 +22,7 @@ const Projects = () => {
       title: 'Luxury Residential Villa',
       category: 'residential',
       description: 'Custom-built luxury villa with premium finishes, smart home systems, and breathtaking views.',
-      image: '/api/placeholder/400/300',
+      image: '/images/construction/residential.jpg',
       year: '2024',
       area: '8,500 sq ft',
       location: 'Exclusive Hillside Community'
@@ -31,7 +32,7 @@ const Projects = () => {
       title: 'Industrial Warehouse Facility',
       category: 'industrial',
       description: 'Large-scale warehouse with advanced logistics systems, energy-efficient design, and modern security features.',
-      image: '/api/placeholder/400/300',
+      image: '/images/construction/industrial.jpg',
       year: '2023',
       area: '150,000 sq ft',
       location: 'Industrial Park'
@@ -41,7 +42,7 @@ const Projects = () => {
       title: 'Shopping Center Renovation',
       category: 'renovation',
       description: 'Complete renovation of a 1980s shopping center, modernizing facilities while preserving architectural character.',
-      image: '/api/placeholder/400/300',
+      image: '/images/construction/renovation.jpg',
       year: '2023',
       area: '180,000 sq ft',
       location: 'Suburban Retail District'
@@ -51,7 +52,7 @@ const Projects = () => {
       title: 'Sustainable Apartment Complex',
       category: 'residential',
       description: 'Green-certified apartment building with solar panels, rainwater harvesting, and energy-efficient systems.',
-      image: '/api/placeholder/400/300',
+      image: '/images/construction/residential.jpg',
       year: '2023',
       area: '120,000 sq ft',
       location: 'Eco-Friendly Community'
@@ -61,7 +62,7 @@ const Projects = () => {
       title: 'Corporate Headquarters',
       category: 'commercial',
       description: 'LEED Platinum certified corporate headquarters featuring innovative workspace design and sustainable materials.',
-      image: '/api/placeholder/400/300',
+      image: '/images/construction/commercial.jpg',
       year: '2022',
       area: '45,000 sq ft',
       location: 'Corporate Campus'
@@ -80,13 +81,24 @@ const Projects = () => {
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
+  const scrollToContact = useCallback(() => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
+  const handleFilterChange = useCallback((filterKey: string) => {
+    setActiveFilter(filterKey);
+  }, []);
+
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-100 text-yellow-800 text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+            <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2" aria-hidden="true"></span>
             Our Portfolio
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -106,12 +118,14 @@ const Projects = () => {
           {filters.map((filter) => (
             <button
               key={filter.key}
-              onClick={() => setActiveFilter(filter.key)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+              onClick={() => handleFilterChange(filter.key)}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-500/50 ${
                 activeFilter === filter.key
                   ? 'bg-green-600 text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-green-100 hover:text-green-700'
               }`}
+              aria-label={`Filter projects by ${filter.label}`}
+              aria-pressed={activeFilter === filter.key}
             >
               {filter.label}
             </button>
@@ -126,15 +140,14 @@ const Projects = () => {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               {/* Project Image */}
-              <div className="relative h-64 bg-gradient-to-br from-yellow-200 to-green-200 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <svg className="w-20 h-20 text-white/80 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                    <p className="text-white/80 font-medium">{project.title}</p>
-                  </div>
-                </div>
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} - ${project.category} construction project`}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
                 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
@@ -145,7 +158,10 @@ const Projects = () => {
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <button 
+                    className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-white/50"
+                    aria-label={`View details for ${project.title}`}
+                  >
                     View Details
                   </button>
                 </div>
@@ -206,13 +222,9 @@ const Projects = () => {
             Let&apos;s discuss your vision and create something extraordinary together.
           </p>
           <button
-            onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-500/50"
+            aria-label="Get started with your next construction project"
           >
             Get Started Today
           </button>
