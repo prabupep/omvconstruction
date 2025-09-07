@@ -57,26 +57,6 @@ const About = () => {
     { number: '100%', label: 'Client Satisfaction' }
   ];
 
-  const teamMembers = [
-    {
-      initials: 'JD',
-      name: 'John Davis',
-      position: 'Project Director',
-      description: '20+ years of experience in large-scale construction projects and team leadership.'
-    },
-    {
-      initials: 'SM',
-      name: 'Sarah Martinez',
-      position: 'Senior Architect',
-      description: 'Licensed architect with expertise in sustainable design and modern construction methods.'
-    },
-    {
-      initials: 'MW',
-      name: 'Mike Wilson',
-      position: 'Site Manager',
-      description: 'Expert in site safety, quality control, and ensuring projects meet all specifications.'
-    }
-  ];
 
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-yellow-50 via-white to-green-50">
@@ -167,31 +147,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            Meet Our Expert Team
-          </h3>
-          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-            Our skilled professionals bring decades of combined experience in construction, 
-            engineering, and project management to every project we undertake.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-green-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">{member.initials}</span>
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h4>
-                <p className="text-green-600 font-medium mb-3">{member.position}</p>
-                <p className="text-gray-600 text-sm">
-                  {member.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
