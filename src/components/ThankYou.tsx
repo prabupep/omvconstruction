@@ -132,7 +132,7 @@ const ThankYou = () => {
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-green-600 font-semibold text-sm">1</span>
                 </div>
-                <p className="text-gray-600">We'll review your project details and requirements</p>
+                <p className="text-gray-600">We&apos;ll review your project details and requirements</p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -144,7 +144,7 @@ const ThankYou = () => {
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-green-600 font-semibold text-sm">3</span>
                 </div>
-                <p className="text-gray-600">We'll contact you to schedule a free consultation</p>
+                <p className="text-gray-600">We&apos;ll contact you to schedule a free consultation</p>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ const ThankYou = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied clients have to say about their 
+              Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about their 
               experience working with OMV Construction Services.
             </p>
           </div>
