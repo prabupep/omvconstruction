@@ -10,7 +10,7 @@ import UnderConstruction from '@/components/UnderConstruction';
 
 export default function Home() {
   // Check if under construction mode is enabled
-  const isUnderConstruction = process.env.UNDER_CONSTRUCTION === 'true';
+  const isUnderConstruction = false; // Disabled - set to true to enable under construction mode
   
   // Debug log (remove in production)
   console.log('UNDER_CONSTRUCTION env var:', process.env.UNDER_CONSTRUCTION);
