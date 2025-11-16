@@ -22,8 +22,8 @@ const Hero = () => {
       {/* Background Image with Enhanced Styling */}
       <div className="absolute inset-0">
         <Image
-          src="/images/construction/indian-construction-site.jpg"
-          alt="Indian construction work in progress - Building the future with OMV Construction Services"
+          src="/images/construction/inspectors-with-sketch.jpg"
+          alt="Construction inspectors with sketch - Building the future with OMV Construction Services"
           fill
           className="object-cover object-center"
           priority
