@@ -39,7 +39,7 @@ const Services = () => {
       id: 3,
       title: 'Industrial Construction',
       description: 'Warehouses, manufacturing facilities, and industrial complexes built for efficiency, safety, and operational excellence.',
-      image: '/images/construction/industrial.jpg',
+      image: '/images/construction/cranes-construction-site.jpg',
       icon: (
         <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -52,7 +52,7 @@ const Services = () => {
       id: 4,
       title: 'Renovation & Remodeling',
       description: 'Transform existing spaces with modern renovations, upgrades, and remodeling projects that enhance value and functionality.',
-      image: '/images/construction/renovation.jpg',
+      image: '/images/construction/close-up-construction-engineer-holding-plans-hands.jpg',
       icon: (
         <svg className="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />

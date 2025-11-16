@@ -22,8 +22,8 @@ const Hero = () => {
       {/* Background Image with Enhanced Styling */}
       <div className="absolute inset-0">
         <Image
-          src="/images/construction/indian-construction-site.jpg"
-          alt="Indian construction work in progress - Building the future with OMV Construction Services"
+          src="/images/construction/investor-calling.jpg"
+          alt="New construction sketch - Building the future with OMV Construction Services"
           fill
           className="object-cover object-center"
           priority
@@ -33,10 +33,10 @@ const Hero = () => {
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
         {/* Enhanced overlay with gradient for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/65"></div>
         {/* Additional subtle pattern overlay */}
         <div 
-          className="absolute inset-0 opacity-30" 
+          className="absolute inset-0 opacity-20" 
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}
@@ -55,26 +55,30 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Enhanced Badge with Better Styling */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-yellow-100/95 text-yellow-800 text-sm font-semibold mb-8 backdrop-blur-sm border border-yellow-200/50 shadow-lg">
-            <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3 animate-pulse" aria-hidden="true"></span>
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-yellow-400/95 text-gray-900 text-sm font-bold mb-8 backdrop-blur-md border-2 border-yellow-500/90 shadow-2xl">
+            <span className="w-2 h-2 bg-gray-900 rounded-full mr-3 animate-pulse" aria-hidden="true"></span>
             Professional Construction Services
-            <span className="ml-3 text-yellow-600" role="img" aria-label="construction">🏗️</span>
+            <span className="ml-3 text-gray-900" role="img" aria-label="construction">🏗️</span>
           </div>
 
           {/* Enhanced Main Headline with Better Typography */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
-            Building Your
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-green-400 animate-pulse">
-              Dreams
-            </span>
-            Into Reality
-          </h1>
+          <div className="mb-8 px-6 py-4 rounded-2xl bg-black/40 backdrop-blur-sm border border-white/10">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              Building Your
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-green-400 drop-shadow-[0_2px_8px_rgba(250,204,21,0.5)]">
+                Dreams
+              </span>
+              Into Reality
+            </h1>
+          </div>
 
           {/* Enhanced Subtitle with Better Readability */}
-          <p className="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg font-medium">
-            From concept to completion, we deliver exceptional construction services with unmatched quality, 
-            reliability, and attention to detail. Your vision, our expertise.
-          </p>
+          <div className="mb-10 px-6 py-4 rounded-xl bg-black/30 backdrop-blur-sm border border-white/10 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-white leading-relaxed font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+              From concept to completion, we deliver exceptional construction services with unmatched quality, 
+              reliability, and attention to detail. Your vision, our expertise.
+            </p>
+          </div>
 
           {/* Enhanced CTA Buttons with Better Hover Effects */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -106,28 +110,30 @@ const Hero = () => {
 
           {/* Enhanced Stats with Better Visual Appeal */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center group">
-              <div className="text-4xl font-bold text-yellow-400 mb-3 drop-shadow-lg group-hover:scale-110 transition-transform duration-300">500+</div>
-              <div className="text-gray-100 drop-shadow-md font-medium">Projects Completed</div>
+            <div className="text-center group px-6 py-4 rounded-xl bg-black/30 backdrop-blur-sm border border-white/10 hover:bg-black/40 transition-all duration-300">
+              <div className="text-4xl font-bold text-yellow-400 mb-3 drop-shadow-[0_2px_8px_rgba(250,204,21,0.6)] group-hover:scale-110 transition-transform duration-300">500+</div>
+              <div className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium">Projects Completed</div>
             </div>
-            <div className="text-center group">
-              <div className="text-4xl font-bold text-green-400 mb-3 drop-shadow-lg group-hover:scale-110 transition-transform duration-300">15+</div>
-              <div className="text-gray-100 drop-shadow-md font-medium">Years Experience</div>
+            <div className="text-center group px-6 py-4 rounded-xl bg-black/30 backdrop-blur-sm border border-white/10 hover:bg-black/40 transition-all duration-300">
+              <div className="text-4xl font-bold text-green-400 mb-3 drop-shadow-[0_2px_8px_rgba(34,197,94,0.6)] group-hover:scale-110 transition-transform duration-300">15+</div>
+              <div className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium">Years Experience</div>
             </div>
-            <div className="text-center group">
-              <div className="text-4xl font-bold text-yellow-400 mb-3 drop-shadow-lg group-hover:scale-110 transition-transform duration-300">100%</div>
-              <div className="text-gray-100 drop-shadow-md font-medium">Client Satisfaction</div>
+            <div className="text-center group px-6 py-4 rounded-xl bg-black/30 backdrop-blur-sm border border-white/10 hover:bg-black/40 transition-all duration-300">
+              <div className="text-4xl font-bold text-yellow-400 mb-3 drop-shadow-[0_2px_8px_rgba(250,204,21,0.6)] group-hover:scale-110 transition-transform duration-300">100%</div>
+              <div className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium">Client Satisfaction</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center shadow-lg">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
+        <div className="flex flex-col items-center">
+          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center shadow-lg">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+          </div>
+          <div className="text-white text-xs mt-2 opacity-80">Scroll Down</div>
         </div>
-        <div className="text-white text-xs mt-2 text-center opacity-80">Scroll Down</div>
       </div>
 
       {/* Additional Decorative Elements */}

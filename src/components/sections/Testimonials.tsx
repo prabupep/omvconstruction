@@ -8,25 +8,25 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Sarah Johnson',
+      name: 'Priya Lakshmi',
       position: 'Property Developer',
-      company: 'Johnson Properties',
+      company: 'Lakshmi Properties',
       content: 'OMV Construction exceeded our expectations on our luxury residential project. Their attention to detail, quality craftsmanship, and professional project management made the entire process seamless. The final result is absolutely stunning.',
       rating: 5,
       project: 'Luxury Residential Complex'
     },
     {
       id: 2,
-      name: 'Michael Chen',
+      name: 'Ramesh Kumar',
       position: 'CEO',
-      company: 'TechStart Inc.',
+      company: 'TechStart India',
       content: 'We chose OMV Construction for our corporate headquarters renovation, and it was the best decision we made. They delivered a modern, energy-efficient workspace on time and within budget. Highly recommended!',
       rating: 5,
       project: 'Corporate Headquarters Renovation'
     },
     {
       id: 3,
-      name: 'Emily Rodriguez',
+      name: 'Kavitha Suresh',
       position: 'Restaurant Owner',
       company: 'Culinary Delights',
       content: 'The team at OMV Construction transformed our outdated restaurant into a modern, welcoming space. Their expertise in commercial renovations and ability to work around our business hours was invaluable.',
@@ -35,16 +35,16 @@ const Testimonials = () => {
     },
     {
       id: 4,
-      name: 'David Thompson',
+      name: 'Senthil Murugan',
       position: 'Operations Manager',
-      company: 'Industrial Solutions Ltd.',
+      company: 'Industrial Solutions India',
       content: 'OMV Construction built our new warehouse facility with precision and efficiency. Their industrial construction expertise and commitment to safety standards were outstanding throughout the project.',
       rating: 5,
       project: 'Industrial Warehouse Facility'
     },
     {
       id: 5,
-      name: 'Lisa Wang',
+      name: 'Meera Anand',
       position: 'Homeowner',
       company: 'Private Residence',
       content: 'Building our dream home with OMV Construction was an amazing experience. They listened to our vision, provided valuable insights, and delivered a home that perfectly matches our lifestyle and needs.',
