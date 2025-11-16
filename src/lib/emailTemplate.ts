@@ -49,10 +49,12 @@ export function generateEmailTemplate(data: {
             <td class="label">Name:</td>
             <td class="value">${data.name}</td>
           </tr>
+          ${data.email ? `
           <tr>
             <td class="label">Email:</td>
             <td class="value"><a href="mailto:${data.email}">${data.email}</a></td>
           </tr>
+          ` : ''}
           ${data.phone ? `
           <tr>
             <td class="label">Phone:</td>

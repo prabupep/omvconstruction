@@ -29,13 +29,26 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Validate Indian phone number format
+    const phoneRegex = /^(\+91|0)?[6-9]\d{9}$/;
+    const cleanPhone = formData.phone.replace(/[\s-]/g, '');
+    
+    if (!phoneRegex.test(cleanPhone)) {
+      alert('Please enter a valid Indian phone number (10 digits starting with 6-9)');
+      setIsSubmitting(false);
+      return;
+    }
+    
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          phone: cleanPhone
+        }),
       });
 
       const result = await response.json();
@@ -168,24 +181,8 @@ const Contact = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
-                    placeholder="Enter your email"
-                  />
-                </div>
-
-                <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
+                    Phone Number *
                   </label>
                   <input
                     type="tel"
@@ -193,8 +190,26 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
+                    required
+                    pattern="^(\+91|0)?[6-9]\d{9}$"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
-                    placeholder="Enter your phone number"
+                    placeholder="Enter your 10-digit phone number"
+                    title="Please enter a valid Indian phone number (10 digits)"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
+                    placeholder="Enter your email (optional)"
                   />
                 </div>
               </div>

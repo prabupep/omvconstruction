@@ -28,20 +28,33 @@ export async function POST(request: NextRequest) {
     });
 
     // Validate required fields
-    if (!firstName || !name || !email || !projectType || !message) {
+    if (!firstName || !name || !phone || !projectType || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       );
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    // Validate Indian phone number format
+    // Accepts: +91XXXXXXXXXX, 0XXXXXXXXXX, or XXXXXXXXXX (10 digits starting with 6-9)
+    const phoneRegex = /^(\+91|0)?[6-9]\d{9}$/;
+    const cleanPhone = phone.replace(/[\s-]/g, '');
+    if (!phoneRegex.test(cleanPhone)) {
       return NextResponse.json(
-        { error: 'Invalid email format' },
+        { error: 'Invalid phone number format. Please enter a valid Indian phone number (10 digits starting with 6-9)' },
         { status: 400 }
       );
+    }
+
+    // Validate email format if provided (email is optional)
+    if (email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return NextResponse.json(
+          { error: 'Invalid email format' },
+          { status: 400 }
+        );
+      }
     }
 
     // Check if email sending is enabled and Resend is configured
@@ -65,21 +78,34 @@ export async function POST(request: NextRequest) {
 
         const emailSubject = `New Customer Enquiry from ${firstName} - ${projectType}`;
         
+        // Prepare email payload - replyTo is optional if email is not provided
+        const emailPayload: {
+          from: string;
+          to: string[];
+          subject: string;
+          html: string;
+          replyTo?: string;
+        } = {
+          from: fromEmail,
+          to: [toEmail],
+          subject: emailSubject,
+          html
+        };
+        
+        // Only add replyTo if email is provided
+        if (email) {
+          emailPayload.replyTo = email;
+        }
+        
         console.log('[send-email] Prepared payload', {
           from: fromEmail,
           to: toEmail,
-          replyTo: email,
+          replyTo: email || 'not provided',
           subject: emailSubject,
           htmlLength: html.length,
         });
 
-        const emailData = await resend.emails.send({
-          from: fromEmail,
-          to: [toEmail],
-          replyTo: email,
-          subject: emailSubject,
-          html
-        });
+        const emailData = await resend.emails.send(emailPayload);
 
         // Log full response for debugging (without sensitive data)
         console.log('[send-email] Resend response', JSON.stringify({
@@ -134,8 +160,8 @@ export async function POST(request: NextRequest) {
       firstName,
       lastName: name,
       fullName: `${firstName} ${name}`.trim(),
-      email,
-      phone,
+      email: email || 'not provided',
+      phone: cleanPhone,
       company,
       projectType,
       message,
