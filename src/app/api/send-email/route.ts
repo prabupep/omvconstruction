@@ -35,6 +35,28 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Validate character limits
+    if (firstName.length > 50) {
+      return NextResponse.json(
+        { error: 'First name must not exceed 50 characters' },
+        { status: 400 }
+      );
+    }
+
+    if (name.length > 50) {
+      return NextResponse.json(
+        { error: 'Last name must not exceed 50 characters' },
+        { status: 400 }
+      );
+    }
+
+    if (message.length > 500) {
+      return NextResponse.json(
+        { error: 'Project details must not exceed 500 characters' },
+        { status: 400 }
+      );
+    }
+
     // Validate Indian phone number format
     // Accepts: +91XXXXXXXXXX, 0XXXXXXXXXX, or XXXXXXXXXX (10 digits starting with 6-9)
     const phoneRegex = /^(\+91|0)?[6-9]\d{9}$/;

@@ -19,6 +19,32 @@ const Contact = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+    
+    // Special handling for phone number to limit to 10 digits
+    if (name === 'phone') {
+      // Remove all non-digit characters except + at the start
+      const cleaned = value.replace(/[^\d+]/g, '');
+      // If starts with +91, allow 3 more digits (total 13 chars: +91 + 10 digits)
+      // If starts with 0, allow 10 more digits (total 11 chars: 0 + 10 digits)
+      // Otherwise, allow max 10 digits
+      let maxLength = 10;
+      if (cleaned.startsWith('+91')) {
+        maxLength = 13; // +91 + 10 digits
+      } else if (cleaned.startsWith('0')) {
+        maxLength = 11; // 0 + 10 digits
+      }
+      
+      // Extract digits only (excluding +91 or 0 prefix)
+      const digitsOnly = cleaned.replace(/^(\+91|0)/, '');
+      if (digitsOnly.length <= 10 && cleaned.length <= maxLength) {
+        setFormData(prev => ({
+          ...prev,
+          [name]: value
+        }));
+      }
+      return;
+    }
+    
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -157,9 +183,11 @@ const Contact = () => {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required
+                    maxLength={50}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter your first name"
                   />
+                  <p className="text-xs text-gray-500 mt-1">{formData.firstName.length}/50</p>
                 </div>
                 
                 <div>
@@ -173,9 +201,11 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
+                    maxLength={50}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter your last name"
                   />
+                  <p className="text-xs text-gray-500 mt-1">{formData.name.length}/50</p>
                 </div>
               </div>
 
@@ -192,10 +222,14 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     pattern="^(\+91|0)?[6-9]\d{9}$"
+                    maxLength={13}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter your 10-digit phone number"
                     title="Please enter a valid Indian phone number (10 digits)"
                   />
+                  <p className="text-xs text-gray-500 mt-1">
+                    {formData.phone.replace(/[\s-]/g, '').replace(/^(\+91|0)/, '').length}/10 digits
+                  </p>
                 </div>
 
                 <div>
@@ -263,10 +297,12 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
+                  maxLength={500}
                   rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200 resize-none"
                   placeholder="Tell us about your project requirements, timeline, and any specific details..."
                 />
+                <p className="text-xs text-gray-500 mt-1">{formData.message.length}/500</p>
               </div>
 
               {/* Submit Button */}
