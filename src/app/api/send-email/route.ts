@@ -78,29 +78,24 @@ export async function POST(request: NextRequest) {
 
         // Log full response for debugging (without sensitive data)
         console.log('[send-email] Resend response', JSON.stringify({
-          id: emailData?.id,
-          from: emailData?.from,
-          to: emailData?.to,
+          hasData: Boolean(emailData?.data),
           hasError: Boolean(emailData?.error),
-          errorType: emailData?.error?.type,
+          dataId: emailData?.data?.id,
           errorMessage: emailData?.error?.message,
         }));
 
         // Check for errors in response
         if (emailData?.error) {
-          const errorMsg = emailData.error.message || emailData.error.type || 'Unknown email error';
+          const errorMsg = emailData.error.message || 'Unknown email error';
           emailError = `Resend API error: ${errorMsg}`;
           console.error('[send-email] Resend API returned error', {
-            type: emailData.error.type,
             message: emailData.error.message,
             name: emailData.error.name,
           });
-        } else if (emailData?.id) {
+        } else if (emailData?.data?.id) {
           emailSent = true;
           console.log('[send-email] Email sent successfully', { 
-            emailId: emailData.id,
-            from: emailData.from,
-            to: emailData.to,
+            emailId: emailData.data.id,
           });
         } else {
           // Unexpected response format
