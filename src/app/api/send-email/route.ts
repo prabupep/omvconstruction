@@ -45,6 +45,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if email sending is enabled and Resend is configured
+    let emailSent = false;
+    let emailError: string | null = null;
+
     if (enableEmailSending && resend && process.env.RESEND_API_KEY) {
       try {
         // Send email using Resend
@@ -73,22 +76,57 @@ export async function POST(request: NextRequest) {
           html
         });
 
-        console.log('[send-email] Resend response', emailData);
-      } catch (emailError) {
+        // Log full response for debugging (without sensitive data)
+        console.log('[send-email] Resend response', JSON.stringify({
+          id: emailData?.id,
+          from: emailData?.from,
+          to: emailData?.to,
+          hasError: Boolean(emailData?.error),
+          errorType: emailData?.error?.type,
+          errorMessage: emailData?.error?.message,
+        }));
+
+        // Check for errors in response
+        if (emailData?.error) {
+          const errorMsg = emailData.error.message || emailData.error.type || 'Unknown email error';
+          emailError = `Resend API error: ${errorMsg}`;
+          console.error('[send-email] Resend API returned error', {
+            type: emailData.error.type,
+            message: emailData.error.message,
+            name: emailData.error.name,
+          });
+        } else if (emailData?.id) {
+          emailSent = true;
+          console.log('[send-email] Email sent successfully', { 
+            emailId: emailData.id,
+            from: emailData.from,
+            to: emailData.to,
+          });
+        } else {
+          // Unexpected response format
+          emailError = 'Unexpected response from Resend API';
+          console.error('[send-email] Unexpected Resend response format', emailData);
+        }
+      } catch (err) {
         // Log as much context as possible without leaking secrets
+        const error = err as { message?: string; name?: string; error?: { message?: string; statusCode?: number } };
+        emailError = error?.message || error?.error?.message || 'Failed to send email';
         console.error('[send-email] Error sending email', {
-          message: (emailError as any)?.message,
-          name: (emailError as any)?.name,
-          statusCode: (emailError as any)?.error?.statusCode,
-          resendError: (emailError as any)?.error,
+          message: error?.message,
+          name: error?.name,
+          statusCode: error?.error?.statusCode,
+          resendError: error?.error,
         });
-        // Don't fail the request if email fails, just log it
       }
     } else if (enableEmailSending) {
-      console.log('[send-email] Email sending enabled but Resend not configured', {
+      emailError = 'Email sending enabled but Resend API key not configured';
+      console.warn('[send-email] Email sending enabled but Resend not configured', {
         hasApiKey,
         resendInitialized: Boolean(resend),
+        enableEmailSending,
       });
+    } else {
+      console.log('[send-email] Email sending is disabled (ENABLE_EMAIL_SENDING is not "true")');
     }
 
     // Log the submission
@@ -99,22 +137,40 @@ export async function POST(request: NextRequest) {
       company,
       projectType,
       message,
+      emailSent,
+      emailError,
       timestamp: new Date().toISOString()
     });
+
+    // Return response based on email sending status
+    if (enableEmailSending && !emailSent && emailError) {
+      // If email was supposed to be sent but failed, return error
+      console.error('[send-email] Email sending failed', { emailError });
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: 'Failed to send email notification. Please contact us directly.',
+          emailError: process.env.NODE_ENV === 'development' ? emailError : undefined
+        },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { 
         success: true, 
-        message: 'Message sent successfully' 
+        message: emailSent ? 'Message sent successfully' : 'Message received successfully',
+        emailSent
       },
       { status: 200 }
     );
 
   } catch (error) {
+    const err = error as { message?: string; name?: string; stack?: string };
     console.error('[send-email] Error processing contact form', {
-      message: (error as any)?.message,
-      name: (error as any)?.name,
-      stack: (error as any)?.stack,
+      message: err?.message,
+      name: err?.name,
+      stack: err?.stack,
     });
     return NextResponse.json(
       { error: 'Internal server error' },
