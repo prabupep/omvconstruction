@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 const Contact = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
+    firstName: '',
     name: '',
     email: '',
     phone: '',
@@ -42,6 +43,7 @@ const Contact = () => {
       if (response.ok) {
         // Reset form
         setFormData({
+          firstName: '',
           name: '',
           email: '',
           phone: '',
@@ -132,8 +134,24 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                    First Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                
+                <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
+                    Last Name *
                   </label>
                   <input
                     type="text"
@@ -143,10 +161,12 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
-                    placeholder="Enter your full name"
+                    placeholder="Enter your last name"
                   />
                 </div>
-                
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -162,9 +182,7 @@ const Contact = () => {
                     placeholder="Enter your email"
                   />
                 </div>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
@@ -179,7 +197,9 @@ const Contact = () => {
                     placeholder="Enter your phone number"
                   />
                 </div>
-                
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company Name

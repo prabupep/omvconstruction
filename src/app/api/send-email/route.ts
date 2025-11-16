@@ -11,7 +11,7 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, company, projectType, message } = body;
+    const { firstName, name, email, phone, company, projectType, message } = body;
 
     // Runtime and env snapshot for troubleshooting (no secrets printed)
     const enableEmailSending = process.env.ENABLE_EMAIL_SENDING === 'true';
@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Validate required fields
-    if (!name || !email || !projectType || !message) {
+    if (!firstName || !name || !email || !projectType || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -50,9 +50,12 @@ export async function POST(request: NextRequest) {
 
     if (enableEmailSending && resend && process.env.RESEND_API_KEY) {
       try {
+        // Combine firstName and lastName for full name
+        const fullName = `${firstName} ${name}`.trim();
+        
         // Send email using Resend
         const html = generateEmailTemplate({
-          name,
+          name: fullName,
           email,
           phone,
           company,
@@ -60,11 +63,13 @@ export async function POST(request: NextRequest) {
           message
         });
 
+        const emailSubject = `New Customer Enquiry from ${firstName} - ${projectType}`;
+        
         console.log('[send-email] Prepared payload', {
           from: fromEmail,
           to: toEmail,
           replyTo: email,
-          subject: `New Customer Enquiry - ${projectType}`,
+          subject: emailSubject,
           htmlLength: html.length,
         });
 
@@ -72,7 +77,7 @@ export async function POST(request: NextRequest) {
           from: fromEmail,
           to: [toEmail],
           replyTo: email,
-          subject: `New Customer Enquiry - ${projectType}`,
+          subject: emailSubject,
           html
         });
 
@@ -126,7 +131,9 @@ export async function POST(request: NextRequest) {
 
     // Log the submission
     console.log('[send-email] Contact form submission', {
-      name,
+      firstName,
+      lastName: name,
+      fullName: `${firstName} ${name}`.trim(),
       email,
       phone,
       company,
