@@ -349,7 +349,7 @@ const Contact = () => {
               <div className="flex space-x-3">
                 <Link
                   href="/"
-                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200 text-white"
                   aria-label="Facebook"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -358,7 +358,7 @@ const Contact = () => {
                 </Link>
                 <Link
                   href="/"
-                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200 text-white"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -367,7 +367,7 @@ const Contact = () => {
                 </Link>
                 <Link
                   href="/"
-                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200 text-white"
                   aria-label="Twitter"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -376,7 +376,7 @@ const Contact = () => {
                 </Link>
                 <Link
                   href="/"
-                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+                  className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200 text-white"
                   aria-label="Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -415,23 +415,6 @@ const Contact = () => {
                   Post-completion support and warranty
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Map Section */}
-        <div className="mt-20">
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Our Location</h3>
-            <div className="h-64 bg-gradient-to-br from-yellow-200 to-green-200 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <svg className="w-16 h-16 text-white/80 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-white/80 font-medium">Interactive Map Coming Soon</p>
-                <p className="text-white/60 text-sm">123 Construction Way, Building District</p>
-              </div>
             </div>
           </div>
         </div>

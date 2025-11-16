@@ -32,7 +32,7 @@ const Projects = () => {
       title: 'Industrial Warehouse Facility',
       category: 'industrial',
       description: 'Large-scale warehouse with advanced logistics systems, energy-efficient design, and modern security features.',
-      image: '/images/construction/industrial.jpg',
+      image: '/images/construction/construction-site.jpg',
       year: '2023',
       area: '150,000 sq ft',
       location: 'Industrial Park'
@@ -42,7 +42,7 @@ const Projects = () => {
       title: 'Shopping Center Renovation',
       category: 'renovation',
       description: 'Complete renovation of a 1980s shopping center, modernizing facilities while preserving architectural character.',
-      image: '/images/construction/renovation.jpg',
+      image: '/images/construction/building-progress.jpg',
       year: '2023',
       area: '180,000 sq ft',
       location: 'Suburban Retail District'

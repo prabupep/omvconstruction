@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   keywords: "construction, building, renovation, construction services, construction company",
   authors: [{ name: "OMV Construction Services" }],
   robots: "index, follow",
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export const viewport: Viewport = {

@@ -161,27 +161,6 @@ const Footer = () => {
 
       </div>
 
-      {/* CTA Section */}
-      <div className="text-center mt-12">
-        <h3 className="text-2xl font-bold text-white mb-4">
-          Ready to Start Your Project?
-        </h3>
-        <p className="text-gray-300 mb-6 max-w-md mx-auto">
-          Let&apos;s discuss your construction needs and create something amazing together.
-        </p>
-        <button
-          onClick={() => {
-            const element = document.getElementById('contact');
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-          className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-        >
-          Get Started Today
-        </button>
-      </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
