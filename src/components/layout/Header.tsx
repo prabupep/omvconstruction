@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import BrandLogo from '../ui/BrandLogo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,11 +64,9 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">OMV</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900">Construction</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <BrandLogo size={72} className="w-16 h-16" priority />
+              <span className="text-2xl font-bold text-gray-900">OM Vinayaga Constructions</span>
             </Link>
           </div>
 

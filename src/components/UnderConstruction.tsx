@@ -1,5 +1,7 @@
 'use client';
 
+import BrandLogo from './ui/BrandLogo';
+
 const UnderConstruction = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-teal-50 relative overflow-hidden">
@@ -14,11 +16,9 @@ const UnderConstruction = () => {
       <header className="relative z-10 pt-8 pb-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-green-500 rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-2xl">OMV</span>
-              </div>
-              <span className="text-2xl font-bold text-gray-900">Construction</span>
+            <div className="flex items-center space-x-4">
+              <BrandLogo size={84} className="w-20 h-20 drop-shadow-2xl" priority />
+              <span className="text-3xl font-bold text-gray-900">OM Vinayaga Constructions</span>
             </div>
           </div>
         </div>

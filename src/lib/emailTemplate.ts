@@ -12,7 +12,7 @@ export function generateEmailTemplate(data: {
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>New Customer Enquiry - OMV Construction</title>
+      <title>New Customer Enquiry - OM Vinayaga Constructions</title>
       <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
         .header { background: linear-gradient(135deg, #fbbf24, #059669); padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 30px; }
@@ -39,7 +39,7 @@ export function generateEmailTemplate(data: {
     <body>
       <div class="header">
         <h1>New Customer Enquiry</h1>
-        <p>OMV Construction Services</p>
+        <p>OM Vinayaga Constructions</p>
       </div>
       
       <div class="contact-info">
@@ -93,7 +93,7 @@ export function generateEmailTemplate(data: {
       
       <div class="footer">
         <p>
-          This email was sent from the OMV Construction Services customer enquiry form.<br>
+          This email was sent from the OM Vinayaga Constructions customer enquiry form.<br>
           Submitted on: ${new Date().toLocaleString()}
         </p>
       </div>

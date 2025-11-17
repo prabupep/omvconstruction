@@ -11,7 +11,7 @@ const Testimonials = () => {
       name: 'Priya Lakshmi',
       position: 'Property Developer',
       company: 'Lakshmi Properties',
-      content: 'OMV Construction exceeded our expectations on our luxury residential project. Their attention to detail, quality craftsmanship, and professional project management made the entire process seamless. The final result is absolutely stunning.',
+      content: 'OM Vinayaga Constructions exceeded our expectations on our luxury residential project. Their attention to detail, quality craftsmanship, and professional project management made the entire process seamless. The final result is absolutely stunning.',
       rating: 5,
       project: 'Luxury Residential Complex'
     },
@@ -20,7 +20,7 @@ const Testimonials = () => {
       name: 'Ramesh Kumar',
       position: 'CEO',
       company: 'TechStart India',
-      content: 'We chose OMV Construction for our corporate headquarters renovation, and it was the best decision we made. They delivered a modern, energy-efficient workspace on time and within budget. Highly recommended!',
+      content: 'We chose OM Vinayaga Constructions for our corporate headquarters renovation, and it was the best decision we made. They delivered a modern, energy-efficient workspace on time and within budget. Highly recommended!',
       rating: 5,
       project: 'Corporate Headquarters Renovation'
     },
@@ -29,7 +29,7 @@ const Testimonials = () => {
       name: 'Kavitha Suresh',
       position: 'Restaurant Owner',
       company: 'Culinary Delights',
-      content: 'The team at OMV Construction transformed our outdated restaurant into a modern, welcoming space. Their expertise in commercial renovations and ability to work around our business hours was invaluable.',
+      content: 'The team at OM Vinayaga Constructions transformed our outdated restaurant into a modern, welcoming space. Their expertise in commercial renovations and ability to work around our business hours was invaluable.',
       rating: 5,
       project: 'Restaurant Renovation'
     },
@@ -38,7 +38,7 @@ const Testimonials = () => {
       name: 'Senthil Murugan',
       position: 'Operations Manager',
       company: 'Industrial Solutions India',
-      content: 'OMV Construction built our new warehouse facility with precision and efficiency. Their industrial construction expertise and commitment to safety standards were outstanding throughout the project.',
+      content: 'OM Vinayaga Constructions built our new warehouse facility with precision and efficiency. Their industrial construction expertise and commitment to safety standards were outstanding throughout the project.',
       rating: 5,
       project: 'Industrial Warehouse Facility'
     },
@@ -47,7 +47,7 @@ const Testimonials = () => {
       name: 'Meera Anand',
       position: 'Homeowner',
       company: 'Private Residence',
-      content: 'Building our dream home with OMV Construction was an amazing experience. They listened to our vision, provided valuable insights, and delivered a home that perfectly matches our lifestyle and needs.',
+      content: 'Building our dream home with OM Vinayaga Constructions was an amazing experience. They listened to our vision, provided valuable insights, and delivered a home that perfectly matches our lifestyle and needs.',
       rating: 5,
       project: 'Custom Luxury Home'
     }
@@ -104,7 +104,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about their 
-            experience working with OMV Construction Services.
+            experience working with OM Vinayaga Constructions.
           </p>
         </div>
 
