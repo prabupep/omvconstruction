@@ -77,7 +77,7 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              OMV Construction Services has been at the forefront of the construction industry for over 15 years, 
+              OM Vinayaga Constructions has been at the forefront of the construction industry for over 15 years, 
               delivering exceptional projects that stand the test of time. Our commitment to quality, innovation, 
               and customer satisfaction has made us a trusted partner for clients across residential, commercial, 
               and industrial sectors.
@@ -113,7 +113,7 @@ const About = () => {
                 <div className="relative w-full h-80 rounded-2xl overflow-hidden">
                   <Image
                     src="/images/construction/about-main.jpg"
-                    alt="Construction excellence and quality work by OMV Construction Services"
+                    alt="Construction excellence and quality work by OM Vinayaga Constructions"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -156,11 +156,11 @@ const About = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Join our growing list of satisfied clients and let us bring your vision to life.
           </p>
-          <button
-            onClick={scrollToContact}
-            className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-500/50"
-            aria-label="Start your construction project with OMV Construction Services"
-          >
+            <button
+              onClick={scrollToContact}
+              className="px-8 py-4 bg-teal-800 hover:bg-yellow-500 text-white hover:text-teal-900 font-semibold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-500/50"
+              aria-label="Start your construction project with OM Vinayaga Constructions"
+            >
             Start Your Project
           </button>
         </div>

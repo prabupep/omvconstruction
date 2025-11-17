@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <Image
           src="/images/construction/investor-calling.jpg"
-          alt="New construction sketch - Building the future with OMV Construction Services"
+          alt="New construction sketch - Building the future with OM Vinayaga Constructions"
           fill
           className="object-cover object-center"
           priority

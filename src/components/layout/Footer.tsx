@@ -1,5 +1,7 @@
 'use client';
 
+import BrandLogo from '../ui/BrandLogo';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -81,11 +83,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">OMV</span>
-              </div>
-              <span className="text-xl font-bold">Construction</span>
+            <div className="flex items-center space-x-4 mb-6">
+              <BrandLogo size={72} className="w-16 h-16 bg-white rounded-xl p-2 shadow-inner" />
+              <span className="text-2xl font-bold">OM Vinayaga Constructions</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Building excellence since 2008. We deliver exceptional construction services with unmatched quality, 
@@ -166,7 +166,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © {currentYear} OMV Construction Services. All rights reserved.
+              © {currentYear} OM Vinayaga Constructions. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-green-400 transition-colors duration-200">Privacy Policy</a>

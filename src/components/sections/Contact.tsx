@@ -388,7 +388,7 @@ const Contact = () => {
 
             {/* Additional Info */}
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h4 className="font-semibold text-gray-900 mb-4">Why Choose OMV Construction?</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Why Choose OM Vinayaga Constructions?</h4>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
