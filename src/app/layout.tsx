@@ -20,8 +20,11 @@ export const metadata: Metadata = {
   authors: [{ name: "OM Vinayaga Constructions" }],
   robots: "index, follow",
   icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/icon.png', type: 'image/png' }
+    ],
+    apple: '/icon.png',
   },
 };
 
